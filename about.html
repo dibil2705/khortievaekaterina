@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Обо мне — Екатерина Хортиева</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f3ed;
+      --card: #ffffff;
+      --accent: #b57262;
+      --accent-2: #3e6157;
+      --text: #1f1c16;
+      --muted: #6d645a;
+      --shadow: 0 18px 40px rgba(31, 28, 22, 0.07);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      padding: 24px 14px 80px;
+    }
+
+    .page {
+      width: min(520px, 100%);
+      background: linear-gradient(180deg, #fffaf6 0%, #f5eee6 100%);
+      border-radius: 28px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .wrap { padding: 20px 20px 36px; }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      margin: 0 0 10px;
+      line-height: 1.2;
+      color: var(--accent-2);
+    }
+
+    h1 { font-size: 30px; }
+    h2 { font-size: 22px; }
+    h3 { font-size: 18px; }
+    p { margin: 0 0 12px; color: var(--muted); line-height: 1.6; }
+
+    .hero {
+      background: radial-gradient(120% 120% at 100% 0%, rgba(181,114,98,0.18), transparent 50%),
+                  radial-gradient(120% 120% at 0% 0%, rgba(62,97,87,0.18), transparent 46%);
+      padding: 22px 20px 12px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(62,97,87,0.08);
+      color: var(--accent-2);
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    section {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 18px 16px 20px;
+      margin: 14px 0;
+      box-shadow: var(--shadow);
+    }
+
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    .pill {
+      background: rgba(62,97,87,0.1);
+      color: var(--accent-2);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #fff, #f8f4f0);
+      border-radius: 16px;
+      padding: 12px 12px 14px;
+      box-shadow: var(--shadow);
+      margin: 10px 0;
+    }
+
+    .list { padding-left: 18px; color: var(--muted); line-height: 1.6; }
+
+    .nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+
+    .nav a {
+      color: var(--accent-2);
+      background: rgba(62,97,87,0.08);
+      padding: 8px 12px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .nav a:hover { background: rgba(181,114,98,0.1); }
+
+    .cta { display: inline-block; margin-top: 8px; text-decoration: none; }
+
+    .foot-note { text-align: center; font-size: 13px; margin-top: 10px; color: var(--muted); }
+
+    @media (min-width: 1024px) {
+      body { padding-top: 60px; }
+      .desktop-gap::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(247,243,237,0.9), rgba(247,243,237,0.65));
+        z-index: -1;
+      }
+    }
+  </style>
+</head>
+<body class="desktop-gap">
+  <div class="page">
+    <div class="hero">
+      <span class="badge">Обо мне</span>
+      <h1>Екатерина Хортиева</h1>
+      <p>Нутрициолог, коуч по здоровью и долголетию, эксперт по пептидной биорегуляции и основатель нескольких wellness-проектов.</p>
+      <div class="nav">
+        <a href="index.html">Главная</a>
+        <a href="approach.html">Мой подход</a>
+        <a href="formats.html">Форматы работы</a>
+        <a href="partners.html">Партнеры</a>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <section>
+        <div class="section-title">
+          <h2>Опыт</h2>
+          <span class="pill">7+ лет практики</span>
+        </div>
+        <p>Нутрициолог, коуч по здоровью и долголетию, эксперт по пептидной биорегуляции, биохакер, основатель проектов ReviveLife, ART &amp; SOUL, Revive Life Organic Market, автор блога «Биофрилансика» и книги «Банановый хлеб».</p>
+        <p>Член Ассоциации нутрициологов и коучей по здоровью. Член Российского союза нутрициологов, диетологов и специалистов пищевой индустрии.</p>
+        <p>Более 20 лет в сфере модификации образа жизни и питания, последние 7 лет — экспертные консультации и сопровождение.</p>
+      </section>
+
+      <section>
+        <div class="section-title">
+          <h2>Образование и повышение квалификации</h2>
+          <span class="pill">международные программы</span>
+        </div>
+        <ul class="list">
+          <li>Health Behavior Change: From Evidence to Action (Yale University)</li>
+          <li>Gut Check: Exploring Your Microbiome (University of California)</li>
+          <li>Early Nutrition Academy, Micronutrients in Pregnancy and Lactation (LMU München)</li>
+          <li>Nutrition and Lifestyle during Pregnancy (LMU München)</li>
+          <li>Коучинг нового мышления (University Global Coaching, ICF)</li>
+          <li>Коронный иммунитет (академия UNIPROF)</li>
+          <li>Биохимия энергии / микробиома / детоксикации / мозга (МИИН)</li>
+          <li>Анти-эйдж менеджмент (Академия специалистов индустрии здоровья МГМУ им. И.М. Сеченова)</li>
+          <li>Интегративный нутрициолог (Международный институт интегративной нутрициологии)</li>
+          <li>Нутриенты для долголетия (European University of Longevity)</li>
+          <li>Постоянный участник российских и международных конференций по нутрициологии и интегративной медицине</li>
+        </ul>
+      </section>
+
+      <section>
+        <div class="section-title">
+          <h2>Научные направления в фокусе</h2>
+          <span class="pill">исследую и применяю</span>
+        </div>
+        <ul class="list">
+          <li>Нейронутрициология и ментальное здоровье</li>
+          <li>Превенция старения и активное долголетие</li>
+          <li>Здоровье кишечника (ось «кишечник-мозг»)</li>
+        </ul>
+        <p class="foot-note">Переходите в раздел «Мой подход», чтобы увидеть, как эти направления интегрированы в практику.</p>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
