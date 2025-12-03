@@ -106,11 +106,16 @@
       text-align: left;
       box-shadow: var(--shadow);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+      display: block;
     }
 
     .cta span { display: block; color: var(--muted); font-weight: 500; margin-top: 6px; font-size: 12px; }
 
     .cta:hover { transform: translateY(-2px); box-shadow: 0 16px 30px rgba(0,0,0,0.08); }
+
+    .primary { background: linear-gradient(120deg, #3e6157, #b57262); color: #fff; }
+    .primary span { color: #f3eae4; }
 
     section {
       background: var(--card);
@@ -120,182 +125,153 @@
       box-shadow: var(--shadow);
     }
 
-    .list {
-      display: grid;
-      gap: 8px;
-      margin: 12px 0 0;
-      padding-left: 16px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .tagline {
-      font-size: 16px;
-      color: var(--text);
-      font-weight: 600;
-      margin: 6px 0 10px;
-    }
-
     .section-title {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       gap: 10px;
-      margin-bottom: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
     }
 
     .pill {
-      padding: 6px 10px;
-      background: rgba(181,114,98,0.12);
-      color: var(--accent);
-      border-radius: 12px;
+      background: rgba(62,97,87,0.1);
+      color: var(--accent-2);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-weight: 600;
       font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.01em;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
 
     .card {
-      background: linear-gradient(135deg, rgba(181,114,98,0.08), rgba(62,97,87,0.05));
-      padding: 14px 12px;
-      border-radius: 14px;
-      margin-top: 10px;
-      border: 1px solid rgba(62,97,87,0.08);
+      background: linear-gradient(180deg, #fff, #f8f4f0);
+      border-radius: 16px;
+      padding: 12px 12px 14px;
+      box-shadow: var(--shadow);
+      margin: 10px 0;
     }
 
-    .price { font-weight: 800; color: var(--accent-2); margin-top: 6px; }
+    .card h3 { margin-bottom: 6px; color: var(--accent); }
+    .price { font-weight: 800; color: var(--accent-2); }
+    .note { font-size: 14px; color: var(--muted); margin-top: 8px; }
 
-    .note { font-size: 13px; color: var(--muted); margin-top: 8px; line-height: 1.5; }
+    .list { padding-left: 18px; color: var(--muted); line-height: 1.6; }
 
-    .buttons-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    .nav {
+      display: flex;
       gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 4px;
     }
 
-    .primary {
-      background: linear-gradient(135deg, #b57262, #3e6157);
-      color: #fff;
+    .nav a {
+      color: var(--accent-2);
+      background: rgba(62,97,87,0.08);
+      padding: 8px 12px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
     }
 
-    .primary:hover { box-shadow: 0 14px 30px rgba(181,114,98,0.28); }
+    .nav a:hover { background: rgba(181,114,98,0.1); }
+
+    .socials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .socials a {
+      text-decoration: none;
+      color: var(--accent-2);
+      font-weight: 700;
+      background: rgba(181, 114, 98, 0.08);
+      padding: 12px 10px;
+      border-radius: 14px;
+      display: inline-flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .socials small { color: var(--muted); font-weight: 500; letter-spacing: 0.02em; }
+
+    .foot-note { text-align: center; font-size: 13px; margin-top: 10px; color: var(--muted); }
 
     .modal {
       position: fixed;
       inset: 0;
-      background: rgba(15, 10, 7, 0.54);
-      display: grid;
-      place-items: center;
-      padding: 20px;
-      visibility: hidden;
+      background: rgba(31, 28, 22, 0.38);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
       opacity: 0;
-      transition: opacity 0.25s ease, visibility 0.25s ease;
-      z-index: 20;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      z-index: 30;
     }
 
-    .modal.open { visibility: visible; opacity: 1; }
+    .modal.open { opacity: 1; pointer-events: auto; }
 
     .modal-card {
-      width: min(460px, 100%);
-      background: #fffaf6;
-      border-radius: 20px;
-      padding: 20px 18px 18px;
-      box-shadow: var(--shadow);
+      background: var(--card);
+      border-radius: 18px;
+      padding: 20px;
+      width: min(520px, 100%);
+      box-shadow: 0 30px 50px rgba(0,0,0,0.16);
       position: relative;
-      max-height: 90vh;
-      overflow-y: auto;
+    }
+
+    .modal-card form { display: grid; gap: 12px; }
+    .modal-card label { display: block; font-weight: 700; margin-bottom: 6px; }
+    .modal-card input, .modal-card textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid #e0d9cf;
+      background: #fdfaf7;
+      font-family: inherit;
+    }
+
+    textarea { resize: vertical; min-height: 90px; }
+
+    .checkbox { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--muted); }
+    .submit {
+      background: linear-gradient(120deg, #3e6157, #b57262);
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      padding: 14px 12px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: var(--shadow);
     }
 
     .close {
       position: absolute;
       top: 10px;
-      right: 10px;
+      right: 12px;
+      border: none;
       background: transparent;
-      border: none;
-      font-size: 20px;
+      font-size: 24px;
       cursor: pointer;
       color: var(--muted);
     }
-
-    form {
-      display: grid;
-      gap: 12px;
-      margin-top: 12px;
-    }
-
-    label { font-weight: 700; font-size: 14px; color: var(--text); }
-
-    input, textarea {
-      width: 100%;
-      padding: 12px 12px;
-      border-radius: 12px;
-      border: 1px solid rgba(0,0,0,0.08);
-      background: #fff;
-      font-size: 14px;
-      font-family: inherit;
-    }
-
-    textarea { min-height: 90px; resize: vertical; }
-
-    .checkbox {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-
-    .submit {
-      padding: 14px;
-      border-radius: 14px;
-      border: none;
-      background: linear-gradient(135deg, #3e6157, #b57262);
-      color: #fff;
-      font-weight: 800;
-      cursor: pointer;
-      box-shadow: 0 12px 26px rgba(62,97,87,0.3);
-      transition: transform 0.2s ease;
-    }
-
-    .submit:hover { transform: translateY(-2px); }
 
     .success {
       display: none;
-      padding: 12px;
+      color: #2e7d32;
+      background: rgba(46, 125, 50, 0.08);
+      padding: 10px 12px;
       border-radius: 12px;
-      background: rgba(62,97,87,0.08);
-      color: var(--accent-2);
       font-weight: 700;
-      margin-top: 10px;
     }
 
-    .socials {
-      margin-top: 18px;
-      display: grid;
-      gap: 10px;
-    }
-
-    .socials a {
-      text-decoration: none;
-      background: var(--card);
-      border-radius: 14px;
-      padding: 12px;
-      color: var(--text);
-      font-weight: 700;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border: 1px solid rgba(0,0,0,0.05);
-      box-shadow: var(--shadow);
-    }
-
-    .socials small { color: var(--muted); font-weight: 600; }
-
-    .foot-note { text-align: center; color: var(--muted); font-size: 12px; margin-top: 6px; }
-
-    .mobile-extra { display: block; font-size: 13px; color: var(--muted); margin-top: 8px; }
-
-    @media (min-width: 820px) {
+    @media (min-width: 1024px) {
       body { padding-top: 60px; }
       .page { margin-left: auto; margin-right: auto; }
       .desktop-gap::before {
@@ -305,7 +281,6 @@
         background: linear-gradient(90deg, rgba(247,243,237,0.9), rgba(247,243,237,0.65));
         z-index: -1;
       }
-      .mobile-extra { display: none; }
     }
 
     @media (max-width: 540px) {
@@ -315,7 +290,6 @@
   </style>
 </head>
 <body class="desktop-gap">
-  <!-- Global: основной контейнер страницы -->
   <div class="page">
     <div class="hero">
       <span class="badge">Нутрициолог · Коуч по здоровью · Биохакер</span>
@@ -323,137 +297,39 @@
       <p class="tagline">здоровый путь без диет — с балансом, осознанностью и современной наукой</p>
       <img src="https://allwebs.ru/images/2025/11/23/67ca2c0b5d4badd74634c0d42513625b.md.png" alt="Екатерина Хортиева" loading="lazy">
       <div class="cta-grid">
-        <button class="cta" data-scroll="#about">ОБО МНЕ <span>регалии, опыт и образование</span></button>
-        <button class="cta" data-scroll="#approach">МОЙ ПОДХОД <span>холистический · интегративный</span></button>
-        <button class="cta" data-scroll="#formats">ФОРМАТЫ РАБОТЫ <span>консультация · сопровождение</span></button>
+        <a class="cta" href="about.html">ОБО МНЕ <span>регалии, опыт и образование</span></a>
+        <a class="cta" href="approach.html">МОЙ ПОДХОД <span>холистический · интегративный</span></a>
+        <a class="cta" href="formats.html">ФОРМАТЫ РАБОТЫ <span>консультация · сопровождение</span></a>
         <button class="cta primary" id="open-modal">ЗАПИСАТЬСЯ НА БЕСПЛАТНУЮ ДИАГНОСТИКУ <span>20 минут — понять ваш путь к здоровью</span></button>
-        <button class="cta" data-scroll="#partners">ПАРТНЕРЫ <span>реферальные ссылки и промокоды</span></button>
+        <a class="cta" href="partners.html">ПАРТНЕРЫ <span>реферальные ссылки и промокоды</span></a>
       </div>
     </div>
 
     <div class="wrap">
-      <!-- Global: Блок «Обо мне» -->
-      <section id="about">
+      <section>
         <div class="section-title">
-          <h2>Обо мне</h2>
-          <span class="pill">7+ лет практики</span>
+          <h2>Быстрые ссылки</h2>
+          <span class="pill">отдельные страницы</span>
         </div>
-        <p class="mobile-extra">На мобильных устройствах вы видите весь мой опыт полностью.</p>
-        <p>Нутрициолог, коуч по здоровью и долголетию, эксперт по пептидной биорегуляции, биохакер, основатель проектов ReviveLife, ART &amp; SOUL, Revive Life Organic Market, автор блога «Биофрилансика» и книги «Банановый хлеб».</p>
-        <p>Член Ассоциации нутрициологов и коучей по здоровью. Член Российского союза нутрициологов, диетологов и специалистов пищевой индустрии.</p>
-        <p>Более 20 лет в сфере модификации образа жизни и питания, последние 7 лет — экспертные консультации и сопровождение.</p>
-        <h3>Образование и повышение квалификации</h3>
-        <ul class="list">
-          <li>Health Behavior Change: From Evidence to Action (Yale University)</li>
-          <li>Gut Check: Exploring Your Microbiome (University of California)</li>
-          <li>Early Nutrition Academy, Micronutrients in Pregnancy and Lactation (LMU München)</li>
-          <li>Nutrition and Lifestyle during Pregnancy (LMU München)</li>
-          <li>Коучинг нового мышления (University Global Coaching, ICF)</li>
-          <li>Коронный иммунитет (академия UNIPROF)</li>
-          <li>Биохимия энергии / микробиома / детоксикации / мозга (МИИН)</li>
-          <li>Анти-эйдж менеджмент (Академия специалистов индустрии здоровья МГМУ им. И.М. Сеченова)</li>
-          <li>Интегративный нутрициолог (Международный институт интегративной нутрициологии)</li>
-          <li>Нутриенты для долголетия (European University of Longevity)</li>
-          <li>Постоянный участник российских и международных конференций по нутрициологии и интегративной медицине</li>
-        </ul>
-        <h3>Научные направления в фокусе</h3>
-        <ul class="list">
-          <li>Нейронутрициология и ментальное здоровье</li>
-          <li>Превенция старения и активное долголетие</li>
-          <li>Здоровье кишечника (ось «кишечник-мозг»)</li>
-        </ul>
-      </section>
-
-      <!-- Global: Блок «Мой подход» -->
-      <section id="approach">
-        <div class="section-title">
-          <h2>Мой подход</h2>
-          <span class="pill">наука + забота</span>
-        </div>
-        <p>На основании современного научного подхода и накопленного опыта помогу выстроить устойчивую систему заботы о себе.</p>
-        <p class="mobile-extra">Мобильный чек-лист: поставьте напоминание о воде, прогуляйтесь 10 минут после еды и ведите дневник самочувствия в заметках.</p>
+        <p>Теперь главные разделы вынесены на отдельные страницы. Выберите то, что вам важно прямо сейчас.</p>
         <div class="card">
-          <p>— Сбалансированная персонализированная система питания вместо краткосрочных диет и голоданий.</p>
-          <p>— Коррекция дефицитов/профицитов с помощью питания, нутрицевтиков и природных биорегуляторов.</p>
-          <p>— Внедрение здоровых привычек, чтобы стать энергичнее, продуктивнее и радостнее.</p>
-          <p>— Поддержка для защиты мозга: меньше стресса, больше свободы, путешествий и времени на себя.</p>
-          <p class="note">Еженедельные wellness-завтраки вместо консультаций за 10–15 тыс. руб. — следите за анонсами в Telegram-канале.</p>
-        </div>
-        <h3>С какими запросами работаю</h3>
-        <ul class="list">
-          <li>Отсутствие энергии</li>
-          <li>Проблемы с ЖКТ</li>
-          <li>Проблемы с кожей</li>
-          <li>Лишний вес</li>
-          <li>Инсулинорезистентность</li>
-          <li>Плохой сон</li>
-          <li>Биохакинг и превенция</li>
-        </ul>
-        <h3>С какими запросами не работаю</h3>
-        <ul class="list">
-          <li>Тяжелые диагнозы</li>
-          <li>Запрос на «волшебную таблетку» и быстрый результат за одну консультацию</li>
-        </ul>
-      </section>
-
-      <!-- Global: Блок «Форматы работы» -->
-      <section id="formats">
-        <div class="section-title">
-          <h2>Форматы работы</h2>
-          <span class="pill">доверие и стратегия</span>
+          <h3>Обо мне</h3>
+          <p>Профессиональный путь, образование и научные интересы.</p>
+          <div class="nav">
+            <a href="about.html">Перейти</a>
+            <a href="approach.html">Мой подход</a>
+          </div>
         </div>
         <div class="card">
-          <h3>Консультация</h3>
-          <p>60 минут, чтобы найти ответ на ваш запрос и составить матрицу здоровья.</p>
-          <p class="price">5 500 ₽ (с 1 января 2026 — 7 000 ₽)</p>
-        </div>
-        <div class="card">
-          <h3>Сопровождение</h3>
-          <p>8 недель персонального погружения (при необходимости +2 недели на анализы):</p>
-          <ul class="list">
-            <li>2 подробные консультации (онлайн/оффлайн)</li>
-            <li>Еженедельный разбор вопросов и трекинг внедрения в личном чате</li>
-            <li>Разбор результатов анализов, рекомендации и практические советы</li>
-            <li>Индивидуальный план по нутрицевтикам и образу жизни</li>
-            <li>Рекомендации по питанию и выбору продуктов</li>
-            <li>Направления к профильным специалистам при необходимости</li>
-          </ul>
-          <p class="price">40 000 ₽</p>
-          <p class="note">Результат — персональная стратегия образа жизни и питания, привычки, которые ведут к здоровью.</p>
-          <p class="note">Ежемесячно беру 2 человека на сопровождение и провожу 5 консультаций — успевайте.</p>
-        </div>
-        <p class="mobile-extra">Бонус для мобильных: добавьте сайт на домашний экран и получайте push-напоминания о встречах через календарь.</p>
-      </section>
-
-      <!-- Global: Блок «Партнеры» -->
-      <section id="partners">
-        <div class="section-title">
-          <h2>Партнеры</h2>
-          <span class="pill">промокоды и реферальные ссылки</span>
-        </div>
-        <div class="card">
-          <p><strong>Peptides – пептиды Хавинсона</strong></p>
-          <a href="https://lk.peptides1.ru/auth/sign-up?referrer=379389" target="_blank" rel="noopener">Открыть ссылку</a>
-        </div>
-        <div class="card">
-          <p><strong>My Genetics</strong> — скидка 5% по коду <b>KHORTIEVA</b></p>
-          <a href="https://mygenetics.ru" target="_blank" rel="noopener">Перейти</a>
-        </div>
-        <div class="card">
-          <p><strong>Hello, Doc!</strong> — 15 000 бонусов и скидка до 25%</p>
-          <a href="https://prod.hellodoc.app/social_invite/c226a18a-35c8-452b-9b83-fe6b5e41b17b/" target="_blank" rel="noopener">Активировать</a>
-        </div>
-        <div class="card">
-          <p><strong>Евразийская Академия Йоги</strong> — скидка по коду Khortieva (в процессе)</p>
-          <a href="https://euroyoga.ru" target="_blank" rel="noopener">Сайт академии</a>
-        </div>
-        <div class="card">
-          <p><strong>Студия Лотос (Сочи)</strong> — 7 сеансов экзотерапии по коду Khortieva (в процессе)</p>
-          <a href="https://lotos-sochi.ru" target="_blank" rel="noopener">Подробнее</a>
+          <h3>Форматы работы</h3>
+          <p>Консультации, сопровождение и условия сотрудничества.</p>
+          <div class="nav">
+            <a href="formats.html">Смотреть форматы</a>
+            <a href="partners.html">Партнеры</a>
+          </div>
         </div>
       </section>
 
-      <!-- Global: футер и соцсети -->
       <section>
         <div class="section-title">
           <h2>Контакты</h2>
@@ -471,7 +347,6 @@
     </div>
   </div>
 
-  <!-- Global: модальное окно для диагностики -->
   <div class="modal" id="modal">
     <div class="modal-card">
       <button class="close" id="close-modal" aria-label="Закрыть">×</button>
@@ -514,13 +389,6 @@
     const closeModal = document.getElementById('close-modal');
     const form = document.getElementById('diagnostic-form');
     const success = document.getElementById('success');
-
-    document.querySelectorAll('[data-scroll]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const target = document.querySelector(btn.dataset.scroll);
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
-    });
 
     openModal.addEventListener('click', () => modal.classList.add('open'));
     closeModal.addEventListener('click', () => modal.classList.remove('open'));

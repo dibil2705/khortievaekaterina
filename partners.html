@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Партнеры — Екатерина Хортиева</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f3ed;
+      --card: #ffffff;
+      --accent: #b57262;
+      --accent-2: #3e6157;
+      --text: #1f1c16;
+      --muted: #6d645a;
+      --shadow: 0 18px 40px rgba(31, 28, 22, 0.07);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      padding: 24px 14px 80px;
+    }
+
+    .page {
+      width: min(520px, 100%);
+      background: linear-gradient(180deg, #fffaf6 0%, #f5eee6 100%);
+      border-radius: 28px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .wrap { padding: 20px 20px 36px; }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      margin: 0 0 10px;
+      line-height: 1.2;
+      color: var(--accent-2);
+    }
+
+    h1 { font-size: 30px; }
+    h2 { font-size: 22px; }
+    h3 { font-size: 18px; }
+    p { margin: 0 0 12px; color: var(--muted); line-height: 1.6; }
+
+    .hero {
+      background: radial-gradient(120% 120% at 100% 0%, rgba(181,114,98,0.18), transparent 50%),
+                  radial-gradient(120% 120% at 0% 0%, rgba(62,97,87,0.18), transparent 46%);
+      padding: 22px 20px 12px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(62,97,87,0.08);
+      color: var(--accent-2);
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    section {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 18px 16px 20px;
+      margin: 14px 0;
+      box-shadow: var(--shadow);
+    }
+
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    .pill {
+      background: rgba(62,97,87,0.1);
+      color: var(--accent-2);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #fff, #f8f4f0);
+      border-radius: 16px;
+      padding: 12px 12px 14px;
+      box-shadow: var(--shadow);
+      margin: 10px 0;
+      display: grid;
+      gap: 8px;
+    }
+
+    .card strong { color: var(--accent-2); }
+    .card a { color: var(--accent); font-weight: 700; text-decoration: none; }
+    .card a:hover { text-decoration: underline; }
+
+    .nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+
+    .nav a {
+      color: var(--accent-2);
+      background: rgba(62,97,87,0.08);
+      padding: 8px 12px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .nav a:hover { background: rgba(181,114,98,0.1); }
+
+    @media (min-width: 1024px) {
+      body { padding-top: 60px; }
+      .desktop-gap::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(247,243,237,0.9), rgba(247,243,237,0.65));
+        z-index: -1;
+      }
+    }
+  </style>
+</head>
+<body class="desktop-gap">
+  <div class="page">
+    <div class="hero">
+      <span class="badge">Партнеры</span>
+      <h1>Реферальные ссылки и промокоды</h1>
+      <p>Подборка проверенных сервисов и брендов, с которыми работаю лично. Воспользуйтесь скидками и бонусами.</p>
+      <div class="nav">
+        <a href="index.html">Главная</a>
+        <a href="about.html">Обо мне</a>
+        <a href="approach.html">Мой подход</a>
+        <a href="formats.html">Форматы работы</a>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <section>
+        <div class="section-title">
+          <h2>Актуальные партнеры</h2>
+          <span class="pill">обновляется</span>
+        </div>
+        <div class="card">
+          <p><strong>Peptides – пептиды Хавинсона</strong></p>
+          <a href="https://lk.peptides1.ru/auth/sign-up?referrer=379389" target="_blank" rel="noopener">Открыть ссылку</a>
+        </div>
+        <div class="card">
+          <p><strong>My Genetics</strong> — скидка 5% по коду <b>KHORTIEVA</b></p>
+          <a href="https://mygenetics.ru" target="_blank" rel="noopener">Перейти</a>
+        </div>
+        <div class="card">
+          <p><strong>Hello, Doc!</strong> — 15 000 бонусов и скидка до 25%</p>
+          <a href="https://prod.hellodoc.app/social_invite/c226a18a-35c8-452b-9b83-fe6b5e41b17b/" target="_blank" rel="noopener">Активировать</a>
+        </div>
+        <div class="card">
+          <p><strong>Евразийская Академия Йоги</strong> — скидка по коду Khortieva (в процессе)</p>
+          <a href="https://euroyoga.ru" target="_blank" rel="noopener">Сайт академии</a>
+        </div>
+        <div class="card">
+          <p><strong>Студия Лотос (Сочи)</strong> — 7 сеансов экзотерапии по коду Khortieva (в процессе)</p>
+          <a href="https://lotos-sochi.ru" target="_blank" rel="noopener">Подробнее</a>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>

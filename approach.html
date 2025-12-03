@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мой подход — Екатерина Хортиева</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f3ed;
+      --card: #ffffff;
+      --accent: #b57262;
+      --accent-2: #3e6157;
+      --text: #1f1c16;
+      --muted: #6d645a;
+      --shadow: 0 18px 40px rgba(31, 28, 22, 0.07);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      justify-content: center;
+      padding: 24px 14px 80px;
+    }
+
+    .page {
+      width: min(520px, 100%);
+      background: linear-gradient(180deg, #fffaf6 0%, #f5eee6 100%);
+      border-radius: 28px;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .wrap { padding: 20px 20px 36px; }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      margin: 0 0 10px;
+      line-height: 1.2;
+      color: var(--accent-2);
+    }
+
+    h1 { font-size: 30px; }
+    h2 { font-size: 22px; }
+    h3 { font-size: 18px; }
+    p { margin: 0 0 12px; color: var(--muted); line-height: 1.6; }
+
+    .hero {
+      background: radial-gradient(120% 120% at 100% 0%, rgba(181,114,98,0.18), transparent 50%),
+                  radial-gradient(120% 120% at 0% 0%, rgba(62,97,87,0.18), transparent 46%);
+      padding: 22px 20px 12px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(62,97,87,0.08);
+      color: var(--accent-2);
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    section {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 18px 16px 20px;
+      margin: 14px 0;
+      box-shadow: var(--shadow);
+    }
+
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+
+    .pill {
+      background: rgba(62,97,87,0.1);
+      color: var(--accent-2);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #fff, #f8f4f0);
+      border-radius: 16px;
+      padding: 12px 12px 14px;
+      box-shadow: var(--shadow);
+      margin: 10px 0;
+    }
+
+    .list { padding-left: 18px; color: var(--muted); line-height: 1.6; }
+
+    .nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+
+    .nav a {
+      color: var(--accent-2);
+      background: rgba(62,97,87,0.08);
+      padding: 8px 12px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .nav a:hover { background: rgba(181,114,98,0.1); }
+
+    .foot-note { text-align: center; font-size: 13px; margin-top: 10px; color: var(--muted); }
+
+    @media (min-width: 1024px) {
+      body { padding-top: 60px; }
+      .desktop-gap::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background: linear-gradient(90deg, rgba(247,243,237,0.9), rgba(247,243,237,0.65));
+        z-index: -1;
+      }
+    }
+  </style>
+</head>
+<body class="desktop-gap">
+  <div class="page">
+    <div class="hero">
+      <span class="badge">Мой подход</span>
+      <h1>Наука + забота</h1>
+      <p>Сбалансированная система питания, коррекция дефицитов и поддержка привычек — без резких диет и перегрузок.</p>
+      <div class="nav">
+        <a href="index.html">Главная</a>
+        <a href="about.html">Обо мне</a>
+        <a href="formats.html">Форматы работы</a>
+        <a href="partners.html">Партнеры</a>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <section>
+        <div class="section-title">
+          <h2>Основы подхода</h2>
+          <span class="pill">холистично и интегративно</span>
+        </div>
+        <div class="card">
+          <p>— Сбалансированная персонализированная система питания вместо краткосрочных диет и голоданий.</p>
+          <p>— Коррекция дефицитов/профицитов с помощью питания, нутрицевтиков и природных биорегуляторов.</p>
+          <p>— Внедрение здоровых привычек, чтобы стать энергичнее, продуктивнее и радостнее.</p>
+          <p>— Поддержка для защиты мозга: меньше стресса, больше свободы, путешествий и времени на себя.</p>
+          <p class="note">Еженедельные wellness-завтраки вместо консультаций за 10–15 тыс. руб. — следите за анонсами в Telegram-канале.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-title">
+          <h2>С какими запросами работаю</h2>
+          <span class="pill">регулярные кейсы</span>
+        </div>
+        <ul class="list">
+          <li>Отсутствие энергии</li>
+          <li>Проблемы с ЖКТ</li>
+          <li>Проблемы с кожей</li>
+          <li>Лишний вес</li>
+          <li>Инсулинорезистентность</li>
+          <li>Плохой сон</li>
+          <li>Биохакинг и превенция</li>
+        </ul>
+      </section>
+
+      <section>
+        <div class="section-title">
+          <h2>С какими запросами не работаю</h2>
+          <span class="pill">честно об ограничениях</span>
+        </div>
+        <ul class="list">
+          <li>Тяжелые диагнозы</li>
+          <li>Запрос на «волшебную таблетку» и быстрый результат за одну консультацию</li>
+        </ul>
+        <p class="foot-note">Для комплексной работы изучите «Форматы работы» и выберите комфортный уровень сопровождения.</p>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
