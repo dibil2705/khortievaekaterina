@@ -10,7 +10,7 @@
       transition: opacity 180ms ease;
       margin: 0;
       padding: 0;
-      background: transparent;
+      background: #efeff0;
       font-family: 'Montserrat', sans-serif;
       color: #425a1e;
       min-height: 100vh;
@@ -24,10 +24,32 @@
       content: "";
       position: fixed;
       inset: 0;
-      background: url('./background.png') center/cover no-repeat;
+      background: #efeff0 url('./background.png') center/contain no-repeat;
+      background-size: auto 100%;
       z-index: -1; /* не -2, иначе в некоторых Chromium может пропасть */
       pointer-events: none;
 
+    }
+
+    /* Soft side fade so a tall photo fits desktop screens with gentle white rails */
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background: linear-gradient(
+        90deg,
+        rgba(255,255,255,0.94) 0%,
+        rgba(255,255,255,0.82) 8%,
+        rgba(255,255,255,0.65) 14%,
+        rgba(255,255,255,0) 30%,
+        rgba(255,255,255,0) 70%,
+        rgba(255,255,255,0.65) 86%,
+        rgba(255,255,255,0.82) 92%,
+        rgba(255,255,255,0.94) 100%
+      );
+      mix-blend-mode: screen;
     }
 
     .wrap, .glass {
