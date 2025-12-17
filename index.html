@@ -74,15 +74,6 @@
       box-shadow: 0 10px 35px rgba(0,0,0,0.2);
     }
 
-    .profile-photo {
-      width: clamp(280px, 85%, 420px);
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      border-radius: 50%;
-      margin: 16px auto 0;
-      display: block;
-    }
-
     h1, h2, h3 {
       font-family: 'Montserrat', sans-serif;
       font-weight: 500;
@@ -511,7 +502,7 @@
     <div class="glass">
       <h1 class="name">Екатерина Хортиева</h1>
       <p>Дипломированный нутрициолог</p>
-      <img class="profile-photo" src="https://allwebs.ru/images/2025/11/23/67ca2c0b5d4badd74634c0d42513625b.md.png">
+      <img src="./katya.webp" style="width:85%; aspect-ratio:1/1; object-fit:cover; border-radius:50%; margin:16px auto 0; display:block;">
       <a class="btn">Записаться на консультацию</a>
     </div>
 
@@ -848,7 +839,7 @@
 ❗ Запрос: ${request}`;
 
       const TOKEN = "8406377449:AAFjqdJJ1t1GLHm9WHH1WRLOf709gyr0kJg";
-      const CHAT_ID = "-5099536601";
+      const CHAT_ID = "-1003221591055";
       const URL = 'https://api.telegram.org/bot' + TOKEN + '/sendMessage';
 
       try {
