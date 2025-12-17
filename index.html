@@ -239,7 +239,32 @@
       margin: 0 0 -15px;
       color: #000000;
     }
-      .glass.modal-panel {
+
+    .hero-card {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-photo {
+      width: 85%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 16px auto 0;
+      display: block;
+    }
+
+    .hero-card .btn {
+      width: min(100%, 420px);
+      padding-inline: 24px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .glass.modal-panel {
       max-width: 520px;
       margin: 60px auto;
       position: relative;
@@ -481,6 +506,16 @@
     .form-followup em { font-style: italic; }
   
 
+    @media (max-width: 640px) {
+      .hero-photo {
+        width: 92%;
+      }
+
+      .hero-card .name {
+        font-size: 48px;
+      }
+    }
+
     @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
       .glass { background: rgba(255,255,255,0.78); }
       .menu-block .item { background: rgba(255,255,255,0.78); }
@@ -499,10 +534,10 @@
   
   <div class="wrap">
 
-    <div class="glass">
+    <div class="glass hero-card">
       <h1 class="name">Екатерина Хортиева</h1>
       <p>Дипломированный нутрициолог</p>
-      <img src="https://allwebs.ru/images/2025/11/23/67ca2c0b5d4badd74634c0d42513625b.md.png" style="width:85%; aspect-ratio:1/1; object-fit:cover; border-radius:50%; margin:16px auto 0; display:block;">
+      <img class="hero-photo" src="https://allwebs.ru/images/2025/11/23/67ca2c0b5d4badd74634c0d42513625b.md.png" alt="Екатерина Хортиева">
       <a class="btn">Записаться на консультацию</a>
     </div>
 
